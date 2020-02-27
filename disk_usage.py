@@ -17,5 +17,5 @@ if not check_disk_usage("/", 2, 10):
     print("ERROR: Not enough disk space")
     sys.exit(0)
     
-print("Everything OK")
+print("Everything OK!")
 sys.exit(1)
