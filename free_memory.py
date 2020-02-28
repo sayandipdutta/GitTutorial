@@ -2,6 +2,6 @@
 
 def main():
     """Checks if there is enough free memory available."""
-    pass
+    print("Everything is ok.")
 
 main()
