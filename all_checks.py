@@ -13,8 +13,15 @@ def check_disk_usage(disk, min_GB, min_percent):
         return False
     return True
 
-if not check_disk_usage(disk="/", min_GB=2, min_percent=10):
-    print("ERROR: Not enough disk space")
+def main():
+    if check_reboot():
+        print("Pending Reboot.")
+        sys.exit(1)
+    if check_root_full():
+        print("Root partition full.")
+        sys.exit(1)
+
+    print("Everything ok.")
     sys.exit(0)
     
 print("Everything OK!")
